@@ -5,14 +5,16 @@
 
 Force `getrandom` syscalls from a process to return zeroes on x86-64 Linux.
 
-Build and run it:
+<br>
+
+Start a Python REPL. Then build and run `getrandom`:
 
 ```txt
 gcc -o unrandom unrandom.c
-./unrandom <pid>
+./unrandom <python's pid>
 ```
 
-Then start a Python REPL:
+Call `os.urandom` in the REPL:
 
 ```txt
 >>> import os
